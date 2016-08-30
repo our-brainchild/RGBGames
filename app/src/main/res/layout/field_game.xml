@@ -875,7 +875,7 @@
         <View
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/main_rectangle"
+            android:background="@drawable/rect_y"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -892,12 +892,15 @@
         android:layout_alignStart="@+id/main_field"
         android:layout_above="@+id/main_field"
         android:layout_alignRight="@+id/main_field"
-        android:layout_alignEnd="@+id/main_field">
+        android:layout_alignEnd="@+id/main_field"
+        android:id="@+id/relativeLayout">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
+            android:layout_centerVertical="true"
+            android:id="@+id/relativeLayout2"
+            android:visibility="gone">
 
             <View
                 android:layout_width="75dp"
@@ -923,6 +926,41 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/score"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout2"
+            android:textSize="24sp"
+            android:textColor="#4CAF50"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Max Score"
+            android:id="@+id/hardScore"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="24sp"
+            android:textColor="#D50000"
+            android:layout_alignTop="@+id/score" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/relativeLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></RelativeLayout>
 
     </RelativeLayout>
 
